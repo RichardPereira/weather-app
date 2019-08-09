@@ -15,6 +15,7 @@ class App extends React.Component {
     description: undefined,
     error: undefined
   }
+
   getWeather = async (event) => {
     event.preventDefault();
 
@@ -24,7 +25,6 @@ class App extends React.Component {
     const API_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
     const data = await API_call.json();
     if (city && country) { // Change the state of the elements only is user input a city and a country else do nothing 
-      console.log(data);
       this.setState({
         temperature: data.main.temp,
         city: data.name,

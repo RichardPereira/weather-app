@@ -1,6 +1,6 @@
 import React from "react"
 
-const Weather = (props) => (
+const Weather = props => (
         <div>
             {props.city && props.country && <p>Location: {props.city}, {props.country}</p>}
             {props.temperature && <p>Temperature:{props.temperature}</p>}
@@ -9,5 +9,5 @@ const Weather = (props) => (
             {props.error && <p>{props.error}</p>}
         </div>
     );
-    
+
 export default Weather;
